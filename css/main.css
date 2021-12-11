@@ -737,26 +737,146 @@ section.features .feature:hover a {
   font-size: 1.2rem;
   text-transform: capitalize;
 }
+
 .testimonials .container .testim h4 {
   margin: .8rem 0;
   font-weight: normal;
   text-transform: capitalize;
   color: var(--p-color);
 }
+
 .testimonials .container .testim .rating {
   margin-bottom: .8rem;
 }
+
 .testimonials .container .testim .rating i {
   background-color: #fff;
 }
+
 .testimonials .container .testim .rating i.filled {
   color: gold;
 }
+
 .testimonials .container .testim p {
   line-height: 1.6;
   color: var(--p-color);
 }
 /* End Testimonials */
+
+/* Start Team members */
+.team-members {
+  padding: var(--section-padding) 0;
+}
+
+.team-members .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.team-members .member {
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+.team-members .member::before,
+.team-members .member::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.team-members .member::before {
+  width: 80%;
+  background-color: #f3f3f3;
+}
+
+.team-members .member::after {
+  width: 0%;
+  background-color: rgba(163, 163, 163, .2);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.team-members .member:hover::after {
+  width: 80%;
+}
+
+.team-members .member .data {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-members .member .data img {
+  width: 80%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.team-members .member:hover .data img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.team-members .member .data .social-icons {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team-members .member .data .social-icons i {
+  margin-bottom: 1rem;
+  color: #777;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.team-members .member .data .social-icons i:hover {
+  color: var(--main-color);
+}
+
+.team-members .member .info {
+  padding-left: 20%;
+}
+
+.team-members .member .info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+
+.team-members .member .info p {
+  line-height: 1.5;
+  color: var(--p-color);
+}
+/* End Team members */
 
 /* Animation keyframes */
 @keyframes up-down {
