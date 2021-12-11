@@ -695,6 +695,69 @@ section.features .feature:hover a {
 }
 /* End Features */
 
+/* Start Testimonials */
+.testimonials {
+  padding: var(--section-padding) 0;
+  background-color: var(--section-background);
+}
+
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.testimonials .container .testim {
+  padding: 1rem;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.testimonials .container .testim img {
+  position: absolute;
+  top: -3rem;
+  right: -.5rem;
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  border: .5rem solid var(--section-background);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.testimonials .container .testim h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.testimonials .container .testim h4 {
+  margin: .8rem 0;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: var(--p-color);
+}
+.testimonials .container .testim .rating {
+  margin-bottom: .8rem;
+}
+.testimonials .container .testim .rating i {
+  background-color: #fff;
+}
+.testimonials .container .testim .rating i.filled {
+  color: gold;
+}
+.testimonials .container .testim p {
+  line-height: 1.6;
+  color: var(--p-color);
+}
+/* End Testimonials */
+
 /* Animation keyframes */
 @keyframes up-down {
   0%, 100% {
