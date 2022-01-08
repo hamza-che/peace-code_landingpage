@@ -1019,6 +1019,64 @@ section.features .feature:hover a {
 }
 /* End Services */
 
+/* Start Our Skills */
+.our-skills {
+  padding: var(--section-padding);
+  background-color: #fff;
+}
+
+.our-skills .container {
+  display: flex;
+}
+
+.our-skills .skills {
+  flex: 1;
+}
+
+.our-skills .skills .skill {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.our-skills .skills .skill h3 {
+  margin-bottom: .8rem;
+}
+
+.our-skills .skills .skill .progress {
+  width: 100%;
+  height: 2rem;
+  background-color: #d5d5d5;
+  overflow: hidden;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.our-skills .skills .skill .progress span {
+  display: inline-block;
+  height: 100%;
+  width: attr(data-progrss);
+  background-color: var(--main-color);
+}
+
+.our-skills .skills .skill .progress span::after {
+  content: attr(data-progress);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5px;
+  border: 1px solid #d5d5d5;
+  color: var(--main-color);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+/* End Our Skills */
+
 /* Animation keyframes */
 @keyframes up-down {
   0%,
