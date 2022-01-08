@@ -20,6 +20,7 @@ html {
 
 body {
   font-family: 'Cairo', sans-serif;
+  counter-reset: section;
 }
 
 ul {
@@ -50,7 +51,7 @@ button {
   padding: 1rem;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 5.5rem;
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
@@ -236,7 +237,6 @@ button {
   -o-transition: var(--main-transition);
 }
 
-
 .header .container nav ul.nav-items > li:last-child:hover .mega-menu {
   z-index: 100;
   opacity: 1;
@@ -300,9 +300,17 @@ button {
     padding: 1rem;
     gap: 0;
   }
-  .header .container nav ul.nav-items li .mega-menu .mega-items:not(:last-child) li a {
-  border-bottom: 2px solid var(--section-background);
-}
+  .header
+    .container
+    nav
+    ul.nav-items
+    li
+    .mega-menu
+    .mega-items:not(:last-child)
+    li
+    a {
+    border-bottom: 2px solid var(--section-background);
+  }
 }
 
 /* End Header */
@@ -412,11 +420,16 @@ section.articles .article {
   -moz-border-radius: .5rem;
   -ms-border-radius: .5rem;
   -o-border-radius: .5rem;
-  transition: transform var(--main-transition), box-shadow var(--main-transition);
-  -webkit-transition: transform var(--main-transition), box-shadow var(--main-transition);
-  -moz-transition: transform var(--main-transition), box-shadow var(--main-transition);
-  -ms-transition: transform var(--main-transition), box-shadow var(--main-transition);
-  -o-transition: transform var(--main-transition), box-shadow var(--main-transition);
+  transition: transform var(--main-transition),
+    box-shadow var(--main-transition);
+  -webkit-transition: transform var(--main-transition),
+    box-shadow var(--main-transition);
+  -moz-transition: transform var(--main-transition),
+    box-shadow var(--main-transition);
+  -ms-transition: transform var(--main-transition),
+    box-shadow var(--main-transition);
+  -o-transition: transform var(--main-transition),
+    box-shadow var(--main-transition);
 }
 
 section.articles .article:hover {
@@ -878,9 +891,138 @@ section.features .feature:hover a {
 }
 /* End Team members */
 
+/* Start Services */
+.services {
+  padding: var(--section-padding) 0;
+  background-color: var(--section-background);
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.7rem;
+}
+
+.services .service {
+  padding: 1.5rem 0 0;
+  background-color: #fff;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  text-align: center;
+  position: relative;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  counter-increment: services;
+}
+
+.services .service:hover {
+  transform: translateY(-.5rem);
+  -webkit-transform: translateY(-.5rem);
+  -moz-transform: translateY(-.5rem);
+  -ms-transform: translateY(-.5rem);
+  -o-transform: translateY(-.5rem);
+}
+
+.services .service::before,
+.services .service::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  height: 3px;
+  width: 0%;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.services .service::before {
+  left: 50%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.services .service::after {
+  right: 50%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+
+.services .service:hover::before,
+.services .service:hover::after {
+  width: 100%;
+}
+
+.services .service i {
+  color: #d5d5d5;
+}
+
+.services .service h3 {
+  margin: 1rem 0 1.8rem;
+  color: var(--main-color);
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+.services .service .info {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.services .service .info a {
+  padding: .5rem;
+  color: var(--main-color);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.services .service .info::before {
+  content: "0" counter(services);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.services .service .info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 17%;
+  height: 100%;
+  width: 15%;
+  background-color: #d5d5d5;
+  transform: skewX(345deg);
+  -webkit-transform: skewX(345deg);
+  -moz-transform: skewX(345deg);
+  -ms-transform: skewX(345deg);
+  -o-transform: skewX(345deg);
+}
+/* End Services */
+
 /* Animation keyframes */
 @keyframes up-down {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -931,7 +1073,7 @@ section.features .feature:hover a {
     left: 0;
     width: 12px;
     height: 12px;
-}
+  }
   100% {
     left: 0;
     width: 100%;
@@ -944,7 +1086,7 @@ section.features .feature:hover a {
     right: 0;
     width: 12px;
     height: 12px;
-}
+  }
   100% {
     right: 0;
     width: 100%;
@@ -963,10 +1105,10 @@ section.features .feature:hover a {
 }
 
 @keyframes flashing {
-  0%, 
+  0%,
   40% {
     opacity: 1;
-}
+  }
   100% {
     opacity: 0;
     width: 200%;
