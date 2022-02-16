@@ -1455,6 +1455,90 @@ section.features .feature:hover a {
 }
 /* End pricing plans */
 
+/* Start our statistics */
+.statistics {
+  padding: var(--section-padding) 0;
+  background-color: var(--section-background);
+  text-align: center;
+}
+
+.statistics h2 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.statistics .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.statistics .stat {
+  padding: 2rem;
+  background-color: #fff;
+  opacity: .8;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.statistics .stat::before,
+.statistics .stat::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 0;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.statistics .stat::before {
+  top: 0;
+  left: 0;
+}
+
+.statistics .stat::after {
+  bottom: 0;
+  right: 0;
+}
+
+.statistics .stat:hover {
+  opacity: 1;
+}
+
+.statistics .stat:hover::before,
+.statistics .stat:hover::after {
+  height: 100%;
+}
+
+.statistics .stat h3 {
+  margin: .5rem 0;
+  font-size: 3rem;
+}
+
+.statistics .stat span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+/* End our statistics */
+
 /* Animation keyframes */
 @keyframes up-down {
   0%,
