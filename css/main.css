@@ -1464,7 +1464,7 @@ section.features .feature:hover a {
 
 .statistics h2 {
   margin-bottom: 3rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-transform: capitalize;
 }
 
@@ -1538,6 +1538,121 @@ section.features .feature:hover a {
   color: var(--main-color);
 }
 /* End our statistics */
+
+/* Start Discount */
+.discounts {
+  display: flex;
+}
+
+.discounts .discount,
+.discounts .request-discount {
+  padding: var(--section-padding) 2rem;
+}
+
+.discounts .discount {
+  flex: 1;
+  background: url(../images/discounts/discount-background1.jpg) no-repeat center
+    center / cover;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.discounts .discount::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, .95);
+}
+
+.discounts .discount h2,
+.discounts .discount p,
+.discounts .discount img {
+  position: relative;
+  z-index: 2;
+}
+
+.discounts .discount h2 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.discounts .discount p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.discounts .discount img {
+  max-width: 50%;
+}
+
+.discounts .request-discount {
+  flex: 1;
+  text-align: center;
+}
+
+.discounts .request-discount h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.discounts .request-discount form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.discounts .request-discount form > * {
+  width: 60%;
+  padding: .7rem;
+  border: none;
+  outline: none;
+  background-color: #fefefe;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.discounts .request-discount form > *:not(input[type="submit"]) {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.discounts .request-discount form input[type="submit"] {
+  background-color: var(--main-color);
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 991px) {
+  .discounts {
+    flex-direction: column;
+  }
+  .discounts > * {
+    flex: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .discounts .discount,
+  .discounts .request-discount {
+    padding: var(--section-padding) 10px;
+  }
+
+  .discounts .request-discount form > * {
+    width: 80%;
+  }
+}
+/* End Discount */
 
 /* Animation keyframes */
 @keyframes up-down {
