@@ -1637,9 +1637,6 @@ section.features .feature:hover a {
   .discounts {
     flex-direction: column;
   }
-  .discounts > * {
-    flex: auto;
-  }
 }
 
 @media (max-width: 767px) {
@@ -1647,12 +1644,141 @@ section.features .feature:hover a {
   .discounts .request-discount {
     padding: var(--section-padding) 10px;
   }
-
   .discounts .request-discount form > * {
     width: 80%;
   }
 }
 /* End Discount */
+
+/* Start footer */
+footer {
+  background-color: #333;
+}
+
+footer .top {
+  padding: var(--section-padding) 0;
+  color: #fff;
+  border-bottom: 1px solid #777;
+}
+
+footer .top .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  gap: 2.5rem;
+}
+
+footer .top .info h2 {
+  font-size: 3rem;
+}
+
+footer .top .info .social-icons {
+  margin: 2rem 0;
+  display: flex;
+}
+
+footer .top .info .social-icons a {
+  margin: 0 .5rem 0 0;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  background-color: #777;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+footer .top .info .social-icons a.youtube:hover {
+  background-color: #ff0000;
+}
+
+footer .top .info .social-icons a.twitter:hover {
+  background-color: #1da1f2;
+}
+
+footer .top .info .social-icons a.facebook:hover {
+  background-color: #1877f2;
+}
+
+footer .top .info p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+footer .top .links li {
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  position: relative;
+}
+
+footer .top .links li:not(:last-child) {
+  border-bottom: 1px solid #aaaaaa;
+}
+
+footer .top .links li a {
+  position: relative;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+footer .top .links a::before {
+  content: "\F101";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: .5rem;
+  color: var(--main-color);
+}
+
+footer .top .links li:hover a {
+  padding-left: 1rem;
+}
+
+footer .top .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .top .contact > div {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+footer .top .contact > div i {
+  margin-right: 1rem;
+  color: var(--main-color);
+}
+
+footer .top .images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: .5rem;
+}
+
+footer .top .images img {
+  width: 80px;
+  border: 2px solid #fefefe;
+}
+
+footer .bottom {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+footer .bottom p span {
+  color: red;
+}
+/* End footer */
 
 /* Animation keyframes */
 @keyframes up-down {
