@@ -1713,7 +1713,7 @@ footer .top .links li {
 }
 
 footer .top .links li:not(:last-child) {
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #777;
 }
 
 footer .top .links li a {
@@ -1757,20 +1757,14 @@ footer .top .contact > div i {
   color: var(--main-color);
 }
 
-footer .top .images {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  gap: .5rem;
-}
-
 footer .top .images img {
   width: 80px;
-  border: 2px solid #fefefe;
+  margin: 5px;
+  border: 3px solid #fefefe;
 }
 
 footer .bottom {
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
   color: #fff;
 }
