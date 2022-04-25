@@ -1068,8 +1068,9 @@ section.features .feature:hover a {
 .our-skills .skills .skill .progress span {
   display: inline-block;
   height: 100%;
-  width: attr(data-progrss);
+  width: 0;
   background-color: var(--main-color);
+  transition: var(--main-transition);
 }
 
 .our-skills .skills .skill .progress span::after {

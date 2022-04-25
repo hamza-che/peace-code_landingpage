@@ -18,11 +18,12 @@ function startCounting(element) {
 }
 
 // Event count down
+let year = 2022;
 const daysContainer = document.querySelector(".latest-events .days");
 const hoursContainer = document.querySelector(".latest-events .hours");
 const minutesContainer = document.querySelector(".latest-events .minutes");
 const secondsContainer = document.querySelector(".latest-events .seconds");
-const countDownDate = new Date("Dec 31, 2022 23:59:59").getTime();
+const countDownDate = new Date(`Dec 31, ${year} 23:59:59`).getTime();
 
 const counter = setInterval(() => {
   const nowDate = new Date().getTime();
@@ -33,18 +34,20 @@ const counter = setInterval(() => {
   const minutes = Math.floor((diffDate % (1000 * 60 * 60)) / 1000 / 60);
   const seconds = Math.floor((diffDate % (1000 * 60)) / 1000);
 
-  days >= 10
-    ? (daysContainer.innerHTML = days)
-    : (daysContainer.innerHTML = `0${days}`);
-  hours >= 10
-    ? (hoursContainer.innerHTML = hours)
-    : (hoursContainer.innerHTML = `0${hours}`);
-  minutes >= 10
-    ? (minutesContainer.innerHTML = minutes)
-    : (minutesContainer.innerHTML = `0${minutes}`);
-  seconds >= 10
-    ? (secondsContainer.innerHTML = seconds)
-    : (secondsContainer.innerHTML = `0${seconds}`);
+  daysContainer.innerHTML = days < 10 ? `0${days}` : days;
+  hoursContainer.innerHTML = hours < 10 ? `0${hours}` : hours;
+  minutesContainer.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+  secondsContainer.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
+
+  diffDate === 0 && year++;
 }, 1000);
 
-console.log(typeof count);
+// Our skills progress bar animation
+const skillsSection = document.getElementById("our-skills");
+const progressSpans = document.querySelectorAll(".our-skills .skill span");
+
+window.onscroll = function() {
+  if (window.scrollY >= skillsSection.offsetTop) {
+    progressSpans.forEach(span => (span.style.width = span.dataset.progress));
+  }
+};
