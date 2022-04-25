@@ -1226,6 +1226,7 @@ section.features .feature:hover a {
   width: 70px;
   display: block;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .latest-events .info .time .unit span:first-child {
